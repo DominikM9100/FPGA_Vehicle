@@ -1,5 +1,39 @@
-The project implements a wheeled vehicle controller on an FPGA. As part of this, control of DC motors, servomechanisms, and ultrasonic sensors has been developed. Control data is received via UART from a Bluetooth module placed on the vehicle.
+Projekt zakładał zbudowanie platformy pojazdu kołowego sterowanego przez układ FPGA firmy Altera (Intel) z rodziny Cyclone IV. Poniżej umieszczono zdjęcie ostatecznej wersji projektu:
 
-The communication method can be changed. Since both the UART receiver and transmitter are described, it is possible to use other communication modules.
+[1]
 
-The project is designed to run on a Cyclone IV E family FPGA. Due to the absence of IP cores, the project can be transferred between devices from different vendors. The only necessary adjustment is replacing certain constant values related to the 50 MHz clock (specific locations are marked with comments).
+W górnej części platformy umieszczono płytkę deweloperską z układem FPGA oraz kilka czujników ultradźwiękowych, których zadaniem było wykrywanie obiektów na drodze pojazdu. Pozostałe czujniki umieszczono na spodzie platformy. Koła pojazdu mogą obracać się o dowolny kąt. Budowę mechanizmu kół przedstawiają poniższe rysunki:
+
+[2]
+
+[3]
+
+Elementami zadającymi kierunek jazdy są serwomechanizmy, natomiast za napęd odpowiadają silniki prądu stałego.
+
+W celu ułatwienia łączenia elementów elektronicznych wykonano płytkę rozszerzającą możliwości platformy deweloperskiej:
+
+[4]
+
+[5]
+
+Sterowanie pojazdem odbywa się poprzez przesyłanie odpowiednich komend ze specjalnie opracowanej aplikacji na urządzenia mobilne z systemem Android. Interfejs aplikacji przedstawia poniższe zdjęcie:
+
+[6]
+
+Poniższe zdjęcia pokazują kolejne etapy powstawania projektu:
+
+[7]
+
+[8]
+
+[9]
+
+[10]
+
+[11]
+
+[12]
+
+[13]
+
+[14]
